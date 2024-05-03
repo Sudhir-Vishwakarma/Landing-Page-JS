@@ -6,39 +6,289 @@
     font-family: "Poppins", sans-serif;
 }
 body{
-    background: #f0faff;
+    background-color: #000;
+    background-image: url(../images/david-mullins-3Jnws1iRSwk-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.nav{
-    position: fixed;
-    top: 0;
-    left: 0;
+.main-container{
     width: 100%;
-    padding: 15px 200px;
-    background: #4a98f7;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
 }
-.nav,
-.nav .nav-links{
+.header{
+    width: 100%;
+}
+.nav-container-one{
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 30px 0px;
 }
-.nav{
-    justify-content: space-between;
+.nav-container-one .logo{
+    width: 8%;
+    text-align: center;
+    margin: 0px 50px;
+    z-index: 3;
 }
-a{
-    color: #fff;
+.logo a{
     text-decoration: none;
 }
-.nav .logo{
-    font-size: 22px;
+.logo h1{
+    color: antiquewhite;
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+.logo span{
+    color: #06b453;
+}
+.nav-container-one .nav-menu{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-container-one .nav-menu li{
+    list-style-type: none;
+    margin: 0px 20px;
+    font-size: 1rem;
+    letter-spacing: 1px;
     font-weight: 500;
 }
-.nav .nav-links{
-    column-gap: 20px;
-    list-style: none;
+.nav-container-one .nav-menu li a{
+    text-decoration: none;
+    color: antiquewhite;
+    transition: all 0.3s ease;
 }
-.nav .search-icon{
-    color: #fff;
-    font-size: 20px;
+.nav-container-one .nav-menu li a:hover{
+    color: #06b453;
+}
+.nav-container-one .nav-login{
+    width: 15%;
+    text-align: center;
+}
+.nav-login .nav-login-btn{
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    background: transparent;
     cursor: pointer;
+    color: antiquewhite;
+}
+.nav-login .nav-login-btn:hover{
+    color: #06b453;
+}
+.nav-login .nav-signup-btn{
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #06b453;
+    color: antiquewhite;
+    transition: all 0.3s ease;
+}
+.nav-login .nav-signup-btn:hover{
+    background-color: antiquewhite;
+    color: #06b453;
+}
+.nav-container-one .fa-bars{
+    display: none;
+}
+.nav-sidebar{
+    width: 50%;
+    position: absolute;
+    top: 0;
+    height: 680px;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    display: none;
+}
+.nav-sidebar ul{
+    margin: 0px 0px 50px 0px;
+}
+.nav-sidebar .nav-menu li{
+    width: 60%;
+    margin: 0px auto;
+    list-style-type: none;
+    padding: 10px 0px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.nav-sidebar .nav-menu li a{
+    text-decoration: none;
+    color: antiquewhite;
+    transition: all 0.3s ease;
+}
+.nav-sidebar .nav-menu li a:hover{
+    color: #06b453;
+}
+.nav-sidebar ul,
+.nav-sidebar .nav-login{
+    position: relative;
+    top: 20%;
+}
+.nav-sidebar .nav-login{
+    text-align: center;
+}
+.nav-sidebar .fa-xmark{
+    color: antiquewhite;
+    position: relative;
+    top: 6.5%;
+    right: -40%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* SignUp Form */
+.signup-container{
+    width: 30%;
+    margin: 0px auto;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    text-align: center;
+}
+.signup-container .signup-content{
+    width: 100%;
+    padding: 10px 0px;
+}
+.signup-content h1{
+    color: #000;
+    font-size: 2rem;
+    margin: 20px 0px;
+}
+.signup-content h1 span{
+    color: #06b453;
+}
+.signup-content .signup-create{
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 5px 0px;
+}
+.signup-content p:last-child{
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.signup-container form{
+    width: 100%;
+    margin: 0px auto;
+    display: grid;
+}
+.signup-container form div{
+    width: 90%;
+    margin: 0px auto;
+    border: 1px solid green;
+}
+.signup-container form div .fa-solid{
+    position: absolute;
+    left: 61%;
+    /* top: 30%; */
+    
+}
+.signup-container form div input{
+    width: 100%;
+}
+.signup-container form input{
+    outline: none;
+    border: 1px solid gray;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 5px 0px ;
+    border-radius: 10px;
+}
+.signup-container form input:focus{
+    border-color: #06b453;
+}
+.signup-container form .signup-checkbox{
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+
+
+@media (max-width: 1000px){
+    .main-container{
+        width: 100%;
+    }
+    .nav-container-one .nav-login{
+        display: flex;
+    }
+    .nav-container-one .logo{
+        margin: 0;
+    }
+    .nav-container-one .nav-menu li{
+        margin: 0px 10px;
+    }
+}
+@media (max-width:800px){
+    .main-container{
+        width: 100%;
+        /* border: 1px solid blue; */
+    }
+    .header{
+        width: 100%;
+    }
+    .nav-container-one{
+        width: 100%;
+    }
+    .nav-container-one .logo{
+        width: 20%;
+        /* border: 1px solid blue; */
+    }
+    .nav-container-one .nav-menu{
+        width: 80%;
+        /* border: 1px solid blueviolet; */
+    }
+    .nav-container-one .nav-login{
+        display: none;
+    }
+}
+@media (max-width: 700px){
+    .main-container{
+        width: 100%;
+    }
+    .header{
+        width: 100%;
+    }
+    .nav-container-one .nav-menu li{
+        display: none;
+    }  
+    .nav-container-one .fa-bars{
+        display: block;
+        color: antiquewhite;
+        font-size: 1.5rem;
+        margin: 0px 35px;
+        cursor: pointer;
+    } 
+}
+@media (max-width: 500px){
+    .nav-container-one .logo{
+        margin: 0px 50px;
+    }
+    .nav-sidebar {
+        width: 100%;
+    } 
+    .nav-sidebar .nav-login{
+        text-align: center;
+    }
 }
