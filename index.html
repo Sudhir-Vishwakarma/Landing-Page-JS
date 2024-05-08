@@ -16,7 +16,9 @@
 
 
     <div class="main-container">
+
         <!-- Header Section -->
+
         <div class="header">
             <div class="nav-container-one">
                 <div class="logo">
@@ -39,7 +41,7 @@
             </div>
             <!-- Navigation SideBar -->
             <div class="nav-sidebar">
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-xmark nav-mark"></i>
                 <ul class="nav-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Features</a></li>
@@ -50,46 +52,164 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <div class="nav-login">
-                    <button class="nav-login-btn">Login</button>
-                    <button class="nav-signup-btn">SignUp</button>
+                    <button class="nav-login-btn" id="login-id">Login</button>
+                    <button class="nav-signup-btn" id="signup-id">SignUp</button>
                 </div>
             </div>
             <!-- Navigation Bar SignUp -->
-            <div class="signup-container">
-                <div class="signup-content">
-                    <h1><span>P</span>oze</h1>
-                    <p class="signup-create">Create An Account</p>
-                    <p>Use Your Credentials To Create An Account</p>
-                </div>
-                <form>
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" class="signup-text" placeholder="Full Name">
+            <div class="signup-bg">
+                <div class="signup-container">
+                    <div class="signup-mark">
+                        <i class="fa-solid fa-xmark signup-mark"></i>
                     </div>
-                    <div>
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" class="signup-email" placeholder="Email Address">
+                    <div class="signup-content">
+                        <h1><span>P</span>oze</h1>
+                        <p class="signup-create">Create An Account</p>
+                        <p>Use Your Credentials To Create An Account</p>
                     </div>
-                    <div>
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" class="signup-password" placeholder="password">
+                    <form>
+                            <input type="text" class="signup-text" placeholder="Full Name">
+                            <input type="email" class="signup-email" placeholder="Email Address">
+                            <input type="password" class="signup-password" placeholder="password">
+                            <button class="signup-btn">Register</button>
+                    </form>
+                    <div class="signup-accounts">
+                        <p>Already have an account?</p>
+                        <a href="#" class="signup-login-btn">Login</a>
                     </div>
-                    <div class="signup-checkbox">
-                        <input type="checkbox">
-                        <p>Remember me</p>
-                    </div>
-                    <button class="signup-btn">Register</button>
-                </form>
-                <div class="signup-accounts">
-                    <p>Already have an account?</p>
-                    <a href="#">Login</a>
                 </div>
             </div>
             <!-- Navigation Bar Login -->
             <div class="login-container">
+                <div class="login-bg">
+                    <div class="login-container">
+                        <div class="login-mark">
+                            <i class="fa-solid fa-xmark login-xmark"></i>
+                        </div>
+                        <div class="login-content">
+                            <h1><span>P</span>oze</h1>
+                            <p class="login-create">Login Into Account</p>
+                            <p>Use Your Credentials To Access An Account</p>
+                        </div>
+                        <form>
+                                <!-- <input type="text" class="signup-text" placeholder="Full Name"> -->
+                                <input type="email" class="login-email" placeholder="Email Address">
+                                <input type="password" class="login-password" placeholder="password">
+                                <button class="login-btn">Login</button>
+                        </form>
+                        <p>or login with</p>
+                        <div class="login-social-media">
+                            <div><i class="fa-brands fa-facebook-f"></i></div>
+                            <div><i class="fa-brands fa-x-twitter"></i></div>
+                            <div><i class="fa-brands fa-linkedin-in"></i></div>
+                        </div>
+                        <div class="login-accounts">
+                            <p>Don't have an account?</p>
+                            <a href="#" class="login-signup-btn">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+
+            <!-- Banner -->
+            <div class="banner">
+                <p>Maximize sales with our advanced</p>
+                <p class="banner-para">POS software Solution</p>
+                <p class="banner-para1">Our advanced POS software is designed to revolutionize your business operations. With its powerful features and
+                    user-friendly interface, enhance customer experiences, and boost your overall efficiency.</p>
+                <div class="banner-btn">
+                    <button>Product Demo</button>
+                    <button>Start Free Trial</button>
+                </div>     
             </div>
         </div>
+
+
+        <!-- Features -->
+
+        <div class="main-feature">
+            <p class="feature-title">Grow Your Business With Poze</p>
+            <div class="feature-titles">
+                <p>Delightfully Simple And Deceptively</p>
+                <p>Our Point of Sell System</p>
+            </div>
+            <div class="main2-feature">
+                <div class="feature-content1">
+                    <i class="fa-solid fa-shop fa-feature"></i><br><bR>
+                    <p class="feature-para1">Suitable For All Types Businesses</p>
+                    <p class="feature-para">Voilla satisfaction spares over the quitting even disguised I just of to I logging and does of lazy.</p>
+                    <div class="feature-learn">
+                        <p>learn More <i class="fa-solid fa-location-arrow"></i></p>
+                    </div>
+                </div>
+                <div class="feature-content1">
+                    <i class="fa-solid fa-money-bill-trend-up fa-feature"></i><br><br>
+                    <p class="feature-para1">Cost Effective With Affordable Price</p>
+                    <p class="feature-para">Voilla satisfaction spares over the quitting even disguised I just of to I logging and does of lazy.</p>
+                    <div class="feature-learn">
+                        <p>learn More <i class="fa-solid fa-location-arrow"></i></p>
+                    </div>
+                </div>
+                <div class="feature-content1">
+                    <i class="fa-solid fa-sliders fa-feature"></i><br><bR>
+                    <p class="feature-para1">Easy to Setup & No IT knowledge Need</p>
+                    <p class="feature-para">Voilla satisfaction spares over the quitting even disguised I just of to I logging and does of lazy.</p>
+                    <div class="feature-learn">
+                        <p>learn More <i class="fa-solid fa-location-arrow"></i></p>
+                    </div>
+                </div>
+                <div class="feature-content1">
+                    <i class="fa-solid fa-layer-group fa-feature"></i><br><bR>
+                    <p class="feature-para1">Modern & Attractive User Dashboard</p>
+                    <p class="feature-para">Voilla satisfaction spares over the quitting even disguised I just of to I logging and does of lazy.</p>
+                    <div class="feature-learn">
+                        <p>learn More <i class="fa-solid fa-location-arrow"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Software Key -->
+
+        <div class="main-key-bg">
+            <div class="main-key">
+                <div class="key-img">
+                    <img src="./images/5024147.png" alt="">
+                </div>
+                <div class="key-detail">
+                    <div class="key-title">Software Key Features</div>
+                    <div class="key-titles">
+                        <p>Powerful Features with Incredible Design</p>
+                    </div>
+                    <div class="key-features">
+                        <div class="key-features1">
+                            <div class="key-num">01</div>
+                            <p class="key-para">Inventory Management</p>
+                            <p>Pos can analyze large volumes of data quickly and accurate, valuable.</p>
+                        </div>
+                        <div class="key-features1">
+                            <div class="key-num">02</div>
+                            <p class="key-para">Sales & Payment Process</p>
+                            <p>If can analyze large volumes of data quickly and accurate, valuable.</p>
+                        </div>
+                        <div class="key-features1">
+                            <div class="key-num">03</div>
+                            <p class="key-para">Report and Analysis</p>
+                            <p>Pos can analyze large volumes of data quickly and accurate, valuable.</p>
+                        </div>
+                        <div class="key-features1">
+                            <div class="key-num">04</div>
+                            <p class="key-para">Secure Fast Transaction</p>
+                            <p>If can analyze large volumes of data quickly and accurate, valuable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
     

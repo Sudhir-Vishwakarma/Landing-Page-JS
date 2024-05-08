@@ -6,15 +6,10 @@
     font-family: "Poppins", sans-serif;
 }
 body{
-    background-color: #000;
-    background-image: url(../images/david-mullins-3Jnws1iRSwk-unsplash.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #34282C;
 }
 .main-container{
-    width: 100%;
-    
+    width: 100%;   
 }
 .header{
     width: 100%;
@@ -24,7 +19,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 0px;
+    padding: 20px 0px 5px;
+    background-color: #000;
+    z-index: 2;
+    position: fixed;
+    top: 0;
 }
 .nav-container-one .logo{
     width: 8%;
@@ -103,7 +102,7 @@ body{
 }
 .nav-sidebar{
     width: 50%;
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 680px;
     background-color: rgba(255,255,255,0.1);
@@ -139,7 +138,7 @@ body{
 .nav-sidebar .nav-login{
     text-align: center;
 }
-.nav-sidebar .fa-xmark{
+.nav-sidebar .nav-mark{
     color: antiquewhite;
     position: relative;
     top: 6.5%;
@@ -149,6 +148,17 @@ body{
 }
 
 /* SignUp Form */
+.signup-bg{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-top: 70px;
+    height: 742px;
+    z-index: 3;
+    background-color: rgba(255,255,255,-0.2);
+    backdrop-filter: blur(8px);
+    display: none;
+}
 .signup-container{
     width: 30%;
     margin: 0px auto;
@@ -188,21 +198,16 @@ body{
     margin: 0px auto;
     border: 1px solid green;
 }
-.signup-container form div .fa-solid{
-    position: absolute;
-    left: 61%;
-    /* top: 30%; */
-    
-}
 .signup-container form div input{
     width: 100%;
 }
 .signup-container form input{
+    width: 80%;
     outline: none;
     border: 1px solid gray;
     font-size: 1rem;
     padding: 10px;
-    margin: 5px 0px ;
+    margin: 10px auto ;
     border-radius: 10px;
 }
 .signup-container form input:focus{
@@ -211,9 +216,461 @@ body{
 .signup-container form .signup-checkbox{
     width: 40%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
+.signup-container form .signup-btn{
+    width: 80%;
+    margin: 20px auto 10px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #06b453;
+    color: antiquewhite;
+    transition: all 0.3s ease;
+}
+.signup-container form .signup-btn:hover{
+    background-color: antiquewhite;
+    color: #06b453;
+    outline: 1px solid #06b453;
+}
+.signup-container .signup-accounts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-container .signup-accounts p{
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin: 10px 0 30px;
+}
+.signup-container .signup-accounts a{
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin: 10px 0 30px;
+    text-decoration: none;
+}
+.signup-mark .signup-mark{
+    position: absolute;
+    top: 15%;
+    left: 62%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #06b453;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+    padding: 12px;
+    background-color: #06b453;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* Login */
+
+.login-bg{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding-top: 70px;
+    height: 742px;
+    background-color: rgba(255,255,255,-0.2);
+    backdrop-filter: blur(8px);
+    display: none;
+}
+.login-container{
+    width: 30%;
+    margin: 0px auto;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    text-align: center;
+}
+.login-container .login-content{
+    width: 100%;
+    padding: 10px 0px;
+}
+.login-content h1{
+    color: #000;
+    font-size: 2rem;
+    margin: 20px 0px;
+}
+.login-content h1 span{
+    color: #06b453;
+}
+.login-content .login-create{
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 5px 0px;
+}
+.login-content p:last-child{
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.login-container form{
+    width: 100%;
+    margin: 0px auto;
+    display: grid;
+}
+.login-container form div{
+    width: 90%;
+    margin: 0px auto;
+    border: 1px solid green;
+}
+.login-container form div input{
+    width: 100%;
+}
+.login-container form input{
+    width: 80%;
+    outline: none;
+    border: 1px solid gray;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 10px auto ;
+    border-radius: 10px;
+}
+.login-container form input:focus{
+    border-color: #06b453;
+}
+.login-container form .login-checkbox{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container form .login-btn{
+    width: 80%;
+    margin: 20px auto 10px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #06b453;
+    color: antiquewhite;
+    transition: all 0.3s ease;
+}
+.login-container form .login-btn:hover{
+    background-color: antiquewhite;
+    color: #06b453;
+    outline: 1px solid #06b453;
+}
+.login-container .login-accounts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container .login-accounts p{
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin: 10px 0 30px;
+}
+.login-container .login-accounts a{
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin: 10px 0 30px;
+    text-decoration: none;
+}
+.login-mark .login-xmark{
+    position: absolute;
+    top: 15%;
+    left: 62%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #06b453;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+    padding: 12px;
+    background-color: #06b453;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.login-container p{
+    font-size: 1rem;
+    margin-top: 40px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.login-container .login-social-media{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container .login-social-media div{
+    width: 30px;
+    height: 30px;
+    outline: 1px solid gray;
+    margin: 0px 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Banner */
+
+.banner{
+    width: 100%;
+    height: 700px;
+    /* position: absolute; */
+    text-align: center;
+    padding-top: 1px;
+    background-color: #000;
+    color: antiquewhite;
+    z-index: -3;
+    /* border: 1px solid orangered; */
+}
+.banner::after{
+    content: '';
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    /* z-index: 3; */
+    border-radius: 50%;
+    background-color: aqua;
+    filter: blur(130px);
+    /* border: 1px solid aqua; */
+}
+.banner::before{
+    content: '';
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    /* z-index: 3; */
+    border-radius: 50%;
+    background-color: #06b453;
+    filter: blur(120px);
+    /* border: 1px solid aqua; */
+}
+.banner p:first-child,
+.banner .banner-para{
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 150px 0px 0px;
+}
+.banner .banner-para{
+    margin-top: 0px !important;
+}
+.banner .banner-para1{
+    width: 60%;
+    margin: 20px auto;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+.banner .banner-btn{
+    width: 100%;
+    /* border: 1px solid orange; */
+    margin-top: 150px;
+}
+.banner .banner-btn button{
+    border: none;
+    outline: none;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #06b453;
+    color: antiquewhite;
+    transition: all 0.3s ease;
+}
+.banner .banner-btn button:hover{
+    color: #06b453;
+    background-color: antiquewhite;
+}
+
+/* Features */
+.main-feature{
+    width: 100%;
+    padding: 100px 0px;
+    text-align: center;
+    color: aliceblue;
+    background-color: #000;
+}
+.main-feature::before{
+    content: '';
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 230%;
+    left: 60%;
+    border-radius: 50%;
+    background-color: orangered;
+    filter: blur(130px);
+}
+.main-feature::after{
+    content: '';
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 140%;
+    left: 30%;
+    border-radius: 50%;
+    background-color: orange;
+    filter: blur(130px);
+}
+.main-feature .feature-title{
+    width: 100%;
+    color: #06b453;
+    font-size: 18px;
+    margin: 20px 0px;
+    font-weight: 500;
+}
+.main-feature .feature-titles{
+    width: 80%;
+    margin: 0px auto 140px;
+}
+.main-feature .feature-titles p{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.main2-feature{
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+.main2-feature .feature-content1{
+    width: 23%;
+    box-shadow: 0px 0px 10px 2px rgba(58,59,60,0.75);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    /* z-index: 0; */
+    transition: transform 0.3s ease;
+}
+.main2-feature .feature-content1:hover{
+    transform: translateY(-8px);
+}
+.feature-content1 .fa-feature{
+    color: orange;
+    display: inline;
+    font-size: 2rem;
+}
+.feature-content1 .feature-para1{
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+    color: antiquewhite;
+}
+.feature-content1 .feature-para{
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin: 15px 0px;
+}
+.feature-content1 .feature-learn{
+    color: #06b453;
+    margin: 40px 0px;
+}
+.feature-learn p{
+    cursor: pointer;
+}
+
+/* Software Key Features */
+.main-key-bg{
+    width: 100%;
+    background-color: #000;
+    padding-bottom: 100px;
+}
+.main-key{
+    width: 80%;
+    margin: 0px auto;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.key-detail .key-title{
+    width: 100%;
+    color: #06b453;
+    font-size: 18px;
+    margin: 20px 0px;
+    font-weight: 500;
+}
+.key-detail .key-titles p{
+    width: 90%;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.key-features{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 0px;
+}
+.key-features .key-features1{
+    width: 90%;
+}
+.key-features .key-features1 .key-num{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 10px 0px;
+    background-color: #06b453;
+    color: antiquewhite;
+}
+.key-features .key-features1 .key-para{
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #fff;
+}
+.key-features .key-features1 p:last-child{
+    margin: 5px 0px;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -239,11 +696,39 @@ body{
     .nav-container-one .nav-menu li{
         margin: 0px 10px;
     }
+    .nav-sidebar{
+        display: none;
+    }
+    .banner{
+        width: 100%;
+    }
+    .banner p:first-child{
+        font-size: 3.5rem;
+    }
+    .banner .banner-para{
+        font-size: 3.5rem;
+    }
+    .banner .banner-para1{
+        width: 80%;
+    }
+    .main2-feature{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .main2-feature .feature-content1{
+        width: 60%;
+        margin: 20px auto;
+    }
+    .main-key{
+        width: 100%;
+    }
 }
+
+
 @media (max-width:800px){
     .main-container{
         width: 100%;
-        /* border: 1px solid blue; */
     }
     .header{
         width: 100%;
@@ -253,16 +738,48 @@ body{
     }
     .nav-container-one .logo{
         width: 20%;
-        /* border: 1px solid blue; */
     }
     .nav-container-one .nav-menu{
         width: 80%;
-        /* border: 1px solid blueviolet; */
     }
     .nav-container-one .nav-login{
         display: none;
     }
+    .banner{
+        width: 100%;
+        height: 800px;
+    }
+    .main2-feature{
+        width: 100%;
+    }
+    .main-container .feature-titles p{
+        font-size: 2rem;
+    }
+    .main2-feature .feature-content1{
+        width: 80%;
+    }
+    .main-key{
+        width: 100%;
+        display: grid;
+        text-align: center;
+    }
+    .key-detail .key-titles{
+        width: 95%;
+        margin: 0px auto;
+        text-align: center;
+        text-align: center;
+    }
+    .key-features{
+        width: 90%;
+        margin: 0px auto;
+        text-align: center;
+    }
+    .key-features .key-features1{
+        width: 100%;
+    }
 }
+
+
 @media (max-width: 700px){
     .main-container{
         width: 100%;
@@ -280,7 +797,35 @@ body{
         margin: 0px 35px;
         cursor: pointer;
     } 
+    .signup-container{
+        width: 50%;
+    }
+    .login-container{
+        width: 50%;
+    }
+    .banner{
+        width: 100%;
+    }
+    .banner p:first-child{
+        width: 100%;
+        font-size: 3rem;
+    }
+    .banner .banner-para{
+        width: 100%;
+        font-size: 3rem;
+    }
+    .main2-feature{
+        width: 100%;
+    }
+    .main-container .feature-titles p{
+        font-size: 2rem;
+    }
+    .main2-feature .feature-content1{
+        width: 90%;
+    }
 }
+
+
 @media (max-width: 500px){
     .nav-container-one .logo{
         margin: 0px 50px;
@@ -290,5 +835,99 @@ body{
     } 
     .nav-sidebar .nav-login{
         text-align: center;
+    }
+    .signup-container{
+        width: 80%;
+    }
+    .signup-mark .signup-mark{
+        position: absolute;
+        top: 15%;
+        left: 75%;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #06b453;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: antiquewhite;
+        padding: 12px;
+        background-color: #06b453;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .login-container{
+        width: 80%;
+    }
+    .login-mark .login-xmark{
+        position: absolute;
+        top: 15%;
+        left: 75%;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #06b453;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: antiquewhite;
+        padding: 12px;
+        background-color: #06b453;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .banner{
+        width: 100%;
+        height: 950px;
+    }
+    .banner::before{
+        display: none;
+    }
+    .banner p:first-child{
+        width: 99%;
+        font-size: 2.3rem;
+    }
+    .banner .banner-para{
+        width: 99%;
+        font-size: 2.3rem;
+    }
+    .banner-btn{
+        width: 90%;
+        display: grid;
+        grid-gap: 30px;
+    }
+    .banner-btn button{
+        margin: 40px 0px;
+    }
+    .main2-feature{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .main-container .feature-titles p{
+        font-size: 2rem;
+    }
+    .main2-feature .feature-content1{
+        width: 90%;
+    }
+    .main-key{
+        width: 100%;
+        display: grid;
+        text-align: center;
+    }
+    .key-detail .key-titles p{
+        width: 100%;
+        font-size: 1.9rem;
+        margin: 0px auto;
+        text-align: center;
+        text-align: center;
+    }
+    .key-features{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    .key-features .key-features1{
+        width: 90%;
+        margin: 0px auto;
     }
 }
