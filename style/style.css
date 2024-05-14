@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #34282C;
 }
@@ -21,7 +24,7 @@ body{
     align-items: center;
     padding: 20px 0px 5px;
     background-color: #000;
-    z-index: 2;
+    z-index: 0;
     position: fixed;
     top: 0;
 }
@@ -145,6 +148,7 @@ body{
     right: -40%;
     font-size: 1.5rem;
     cursor: pointer;
+    display: block;
 }
 
 /* SignUp Form */
